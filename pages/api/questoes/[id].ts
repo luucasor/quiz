@@ -1,6 +1,5 @@
+import questoes from '@/pages/api/bancoDeQuestoes'
+
 export default (req, res) => {
-    res.status(200).json({
-        id: +req.query.id,
-        name: 'Pedro #02'
-    })
+    res.status(200).json(questoes[0])
 }
