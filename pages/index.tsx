@@ -19,14 +19,14 @@ export default function Home() {
   async function carregarIdsDasQuestoes() {
     const resp = await fetch(`${BASE_URL}/questionario`)
     const idsDasQuestoes = await resp.json()
-    console.log(idsDasQuestoes)
     setIdsDasQuestoes(idsDasQuestoes)
   }
 
   async function carregarQuestao(idQuestao: number) {
     const resp = await fetch(`${BASE_URL}/questoes/${idQuestao}`)
     const json = await resp.json()
-    console.log(json)
+    const novaQuestao = QuestaoModel.criarUsandoObjeto(json)
+    setQuestao(novaQuestao)
   }
 
   useEffect(() => {
