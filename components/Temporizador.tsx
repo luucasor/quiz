@@ -13,8 +13,8 @@ export default function Temporizador(props: TemporizadorProps) {
                 duration={props.duracao}
                 size={120}
                 isPlaying
-                colors={['#BCE596', '#F7B801', '#ED827A', '#ED827A']}
-                colorsTime={[10, 5, 3, 0]}
+                colors={['#BCE596', '#F7B801', '#ED827A']}
+                colorsTime={[10, 5, 0]}
                 onComplete={props.tempoEsgotado}
             >    
             {({ remainingTime }) => remainingTime}
