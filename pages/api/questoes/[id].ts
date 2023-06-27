@@ -1,6 +1,6 @@
 import questoes from '@/pages/api/bancoDeQuestoes'
 
-export default (req, res) => {
+const questao = (req, res) => {
     const idSelecionado = +req.query.id
     const unicaQuestaoOuNada = questoes.filter(questao => questao.id === idSelecionado)
     
@@ -11,3 +11,5 @@ export default (req, res) => {
         res.status(204).send()
     }
 }
+
+export default questao
